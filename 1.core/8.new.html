@@ -1,0 +1,38 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('<div>').appendTo('hr') //div element를 hr에 집어 넣겠다.
+
+    $('<div>', { //div element(타입:string)만들고 두번째파라미터지정(타입:객체)
+        html: '<p class="center">red</p>',
+        class: 'red'
+    }).appendTo('hr')
+})
+</script>
+
+<style>
+    div {
+        background-color: orange;
+        width:  5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+    }
+    
+    hr {
+        border: .1rem solid;
+    }
+
+    .red {
+        background: red;
+        position: relative;
+    }
+
+    p.center {
+        position: absolute;
+        left: 1.7rem;
+        top: 1rem;
+        font-weight: bold;
+    }
+</style>
+
+<hr>

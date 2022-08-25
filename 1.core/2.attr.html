@@ -1,0 +1,18 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+    $(() => {
+        console.log($('a').attr('href')) //attr은 어트리뷰트 value를 리턴함.
+        
+        $('a').attr('href', 'https://www.daum.net') //브라우저 왼쪽페이지 google naver버튼 눌러도 daum으로 이동함
+
+        $('a').attr({ // 브라우저 google, naver 누르면 jquery페이지로 연결
+            href: 'https://jquery.com',
+            target: '_blank' //?
+        })
+
+        $('a').removeAttr('target')
+    })
+</script>
+
+<a href='https://www.google.co.kr/'>google</a> <!-- https://www.google.co.kr/ : 속성값, 영어론 어트리뷰트라고함-->
+<a href='https://www.naver.com/'>naver</a>
