@@ -1,0 +1,18 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let $div1 = $('div')
+    let $div2 = $div1.eq(0) //jquery 메서드 콜O
+    let div3 = $div1.get(0) //제이쿼리 메서드 콜X,->WHY? div3은 제이쿼리 object이 아니기 때문에
+    console.log($div1, $div2, div3)
+    console.log(typeof $div1, typeof $div2, typeof div3) // object object object
+
+    //위와 셀렉터가 동일하다. 위, 아래 찾는 객체 둘다 17번줄 div? 논리적으론 같은객체 그럼 과연 물리적으로 같은 객체일까?
+    let $div11 = $('div')
+    let $div22 = $div11.eq(0)
+    let div33 = $div11.get(0)
+    console.log($div1 == $div11, $div2 == $div22, div3 == div33) // false false true 
+})
+</script>
+
+<div></div> 

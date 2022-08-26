@@ -1,26 +1,26 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 $(() => {
-    $('<div>').appendTo('hr') //div element를 hr에 집어 넣겠다.
-    
-    $('<div>', { //div element(타입:string)만들고 두번째파라미터지정(타입:객체)
+    $('<div>').appendTo('hr')
+
+    $('<div>', {
         html: '<p class="center">red</p>',
         class: 'red'
     }).appendTo('hr')
-  
-    //과제: 위 $() 파라미터를 하나로 줄여라.
-    $('<div class="red"><p class="center">red</p></div>').appendTo('hr')
+
+    //과제
+    $('<div class="red"><p class="center">red</p>').appendTo('hr')
 })
 </script>
 
 <style>
     div {
         background-color: orange;
-        width:  5rem;
+        width: 5rem;
         height: 5rem;
         border-radius: 2.5rem;
     }
-    
+
     hr {
         border: .1rem solid;
     }

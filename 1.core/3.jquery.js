@@ -4,9 +4,9 @@ $('#myId') // <div id='myId'></div> 이 div element가 컬렉션안에 들어가
 $('.myClass') //css 부분 다시 공부해....................
 
 // 과제: name attribute value가 surname인 input DOM들을 찾아라.
-$('input[name="surname"]') // <input name='surname/> element찾는 거임
+$('input[name="surname"]') //tag selector // <input name='surname/> element찾는 거임
 
-$('#contents ul.people li')
+$('#contents ul.people li') //desendent? selector 디센던트셀렉터
 //위 selector에 해당하는 HTML code를 작성하라.
 /*
 <div id = 'contents'>
@@ -17,7 +17,7 @@ $('#contents ul.people li')
 </div>
 */
 
-$('a.external:first') //first 첫번째만 찾는 거
+$('a.external:first') //first 첫번째만 찾는 거, 마지막거 얻고싶을땐 last.
 /*
 <a class='external'></a> // -- first가 붙어있어서 얘만 리턴됨
 <a class='external'></a>
@@ -33,9 +33,9 @@ $('li:odd') // odd홀수번째 인덱스 골라냄
 </ul>
 */
 
-$('div:visible') //보이는 객체?만 찾는 거임
+$('div:visible') //보이는 객체?만 찾는 거임, 렌더링되어있는것, 화면에 출력된거만 찾는다!
 
-$('div:gt(1)')
+$('div:gt(1)') // 1index초과한거 찾는다. <-
 /*
 <div></div>
 <div></div>
@@ -50,8 +50,9 @@ $('a[rel$="thinger"]') //thinger로 끝나는
 <a rel='so-thinger'></a> --
 */
 
+//필터링
 $('div.foo').has('p') //foo클래스가 붙어있는 div찾아내 그중 'p'를 갖는 걸 찾기 컬렉션. 필터링
-//jquery도 컬렉션리턴, .has()도 컬렉션리턴, 필터링해서 첫번째만 빼낸다.
+//jquery도 컬렉션리턴, .has()도 컬렉션리턴, 필터링해서 첫번째만 빼낸다. has는 div를 리턴한다.
 /* 
 <div class='foo'>
     <p></p>
@@ -90,18 +91,18 @@ $('form :checked') //폼에서 체크된 것들만 찾겠다.
 <select><option></option></select> //체크된 옵션을 찾는것
 */
 
-$('form :selected') //select의 옵션에 해당하는 것, 
+$('form :selected') //select의 옵션에 해당하는 것,  체크된 옶션 찾아내는 것
 /*
 <select><option></option></select> //얘는 checked< selected에서 둘다 걸림
 */
 
-$('form :enable')
-$('form :disable')
+$('form :enabled') //기본값 enable 
+$('form :disabled')
 
 $('form :file') // <input type='file'/>
 
 $('form :input')
-/* input 라이프?라이트?에 속함.
+/* input 객체?라이프?라이트?에 속함.
 <input type='text'/>
 <textarea></textarea>
 <select></select>
@@ -120,9 +121,9 @@ $('form input[name="gender"]:radio') //attribute가 gender인거 찾겠다. :스
 </form>
 */
 
-$('form :reset') // <input type='reset'/>
+$('form :reset') // <input type='reset'/> 리셋버튼 찾기
 
-$('form :submit') // <input type='submit'/>
+$('form :submit') // <input type='submit'/> submit버튼찾기
 
 
 

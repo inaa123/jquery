@@ -1,9 +1,16 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 $(() => {
-    
+    /*
+    for(let i = 0; i < 10; i++)
+        $(`<li>item ${i}</li>`).appendTo('ul')
+    */
+    let items = []
+    for(let i = 0; i < 10; i++)
+        items.push(`<li>item ${i}</li>`) //items 원소 10개가 생김.
+    $(items.join('')).appendTo('ul') //li가 10개있는 html컨텐츠를 만들고 .appendTo('ul') 로 렌더링값 한번만   
 })
-</script>
+</script> 
 
 <ul>
 </ul>

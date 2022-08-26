@@ -7,11 +7,12 @@ $(() => {
     console.log($('footer').html())
 
     console.log($('header').find('h1').eq(1).html())
-    $('header').find('h1').eq(1).html('<hr>') //find는 h1을리턴한다.
+    $('header').find('h1').eq(1).html('<hr>')
 
-    $('ul').find('li').eq(2).html('index: 2').end() //end()쓰면 처음?find()로 돌아감.
+    $('ul').find('li').eq(2).html('index: 2').end()
         .eq(3).html('index: 3')
-        .eq(4).html('index: 4') //얘는 출력X
+        .eq(4).html('index: 4')
+
 })
 </script>
 

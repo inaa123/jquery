@@ -1,0 +1,18 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('body').data('foo', 10) //body객체에 foo라는 데이터를 집어넣음.
+    $('body').data('bar', {isManual: true}) //value는 any타입 
+    $('body').data({
+        baz: [1, 2],
+        hoi: 'hello'
+    }) // 데이터 두개 한번에 집어 넣음
+
+    console.log($('body').data('foo')) //$('body').data('key')
+    console.log($('body').data('bar'))
+
+    console.log($('body').data()) //4개의 엔트리 다 들어감
+})
+</script>
+
+<!--객체에 -->

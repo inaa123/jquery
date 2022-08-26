@@ -1,0 +1,14 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    console.log($('h1').css('font-size')) //css('속성명(preoperty name)') // 32px(1rem의 두배)
+    console.log($('h1.big').css('font-size', '3rem'))
+    $('h1.big').css({
+        'font-size': '4rem',
+        color: 'red' //key 단어가 두개 이상이거나 특수문자 있으면 '' , 한단어면 ''써도되고 안써돋 됨/ value는 ''꼭 써야함
+    })
+})
+</script>
+
+<h1>HEELO</h1>
+<h1 class='big'>WORLD</h1>

@@ -1,0 +1,21 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let h1 = $('h1')
+
+    console.log(h1.width(), h1.height()) // width는 컨텐츠 박스의 크기. (읽기)
+
+    h1.width('5rem') //(쓰기)
+    h1.height('5rem')
+})
+</script>
+
+<style>
+h1 {
+    border: .1rem solid;
+
+}
+</style>
+
+<h1>HEELO</h1>
+<h1>WORLD</h1>

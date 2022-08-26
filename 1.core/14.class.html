@@ -1,0 +1,21 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let h1 = $('h1')
+
+    h1.addClass('blue') //h1컬렉션.CLASSselector
+    h1.removeClass('blue') 
+    h1.toggleClass('blue') //remove 된 시점에 toggle하니까 add가 됨
+
+    h1.hasClass('blue') && console.log('blue') //blue클래스가 있는상태여서 true리턴됨.
+})
+</script>
+
+<style>
+.blue {
+    color: blue;
+}
+</style>
+
+<h1>HEELO</h1>
+<h1>WORLD</h1>
