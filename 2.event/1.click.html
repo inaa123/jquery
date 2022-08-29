@@ -1,0 +1,15 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+   let cnt = 0 //count변수 선언
+   
+   //hr과제에 이 버튼들 사용하기. 추가버튼 누르면 노동자 추가, 삭제버튼 누르면 노동자 삭제
+   $('button').eq(0).click(() => $(`<li>${cnt++}</li>`).appendTo('ul')) //button중 0번째꺼 사용. click파라미터로 콜백을 넣는다. 콜백은 핸들러. 
+
+   $('button').eq(1).click(() => $('ul').empty()) //empty는 ul의 children들을 다 지움.
+})
+</script>
+
+<button type='button'>click</button>
+<button type='button'>clear</button>
+<ul></ul>

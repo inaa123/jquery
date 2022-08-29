@@ -2,6 +2,10 @@
 <script>
 $(() => {
     // 과제: 전화번호를 숫자만으로 정제하라.
+    //$('input').val($('input').val().split('-').join('')) //input객체찾아 .val로 정제된값..
+
+    //$('input').val($('input').val().replaceAll('-', ''))
+    $('input').val($('input').val().replace(/-/g, '')) // 검색할문자를 / /적고 g는 범위 global임 즉 전체를 뒤져서 -를 찾겠다.
 })
 </script>
 

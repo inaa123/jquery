@@ -2,6 +2,20 @@
 <script>
 $(() => {
     $('li').each((i, e) => console.log(i, e))
+
+    $('li').each((i, e) => console.log(i, e.id))
+
+    /*
+    0 'a'
+    1 'b'
+    2 'c'
+    */
+
+    jQuery.each([1, 2, 3, 4], (i, e) => console.log(`[${i}]: `, e))
+    
+    $.each($('li').toArray(), (i, e) => console.log(i, e))
+    
+    $.each({name: 'adelia', age: 20}, (k, y) => console.log(k, ':', v))
 })
 </script>
 <ul>

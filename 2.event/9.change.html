@@ -1,0 +1,36 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    /*
+    $('#wrap').on({
+        change() { //change이벤트핸들러가 발생하면.
+            $('span').text($(this).val())
+        }
+    })
+    */
+    //과제: span에 메시지가 출력되도록 하라.
+    /* 1번 객체, 파라미터를 넣어준거
+    $('#wrap').on({
+        change() {
+            $('span').text($(this).val())
+        }
+    }, '.c') //.c클래스가 붙어있는 자식들을찾아서 span작동하게 핸들러 뭐시기~
+    */
+    $('#wrap').on('change', '.c', function() {
+        $('span').text($(this).val())
+    })
+}) //제이쿼리쓰면 이벤트 ㅇㅇ가 편해짐
+</script>
+
+<div id='wrap'>
+    <select id='fruit' class='c'>
+        <option>select1</option>
+        <option>select2</option>
+    </select>
+    <input type='checkbox' value='check' class='c'/>
+    <input type='radio' value='radio' class='c'/>
+
+    <input type='text' class='c'/> <!-- enter key를 눌러야, change event가 발생한다.-->
+</div>
+
+<span></span> <!--span에다 메시지 출력할거임~-->

@@ -1,0 +1,28 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let greet = ' hello world '
+    log(greet.replace(' ', '')) //처음 거만
+    log(greet.replaceAll(' ', '')) //모두 바꿈
+    log(greet.replace(/\s/g, ''))
+    log(greet.replace(/^\s/g, ''))
+    log(greet.replace(/\s$/g, ''))//마지막스페이스
+    log(greet.replace(/^\s|\s$/g, ''))
+
+    greet = '1-2-3,4,5'
+    console.log(greet.replace(/-/g, ''))
+    console.log(greet.replace(/,/g, ''))
+    console.log(greet.replace(/[-,]/g, '')) // - 이나 ,를 ''로 바꾸고싶다. []안에적기
+
+    greet = '1-,2-,3'
+    console.log(greet.replace(/-,/g, '')) // -,가 하나의 덩어리여서 []안씀
+
+    greet = 'hello\nworld'
+    //과제 : helloworld가 출력되도록하라.
+    console.log(greet.replace(/\n/g, ''))
+})
+
+function log(str) {
+    console.log('|' + str + '|')
+}
+</script>

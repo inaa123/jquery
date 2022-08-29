@@ -1,0 +1,11 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('a').click(e => {
+        e.preventDefault() //기본핸들러 막기
+        $('body').append('<p>prevent default handler</p>')
+    })
+})
+</script>
+
+<a href='http://jquery.com'>jquery</a> <!--기본핸들러 존재하기 때문에 만들지 않아도 됨-->

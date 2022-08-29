@@ -1,9 +1,9 @@
 <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
 <script>
 $(() => {
-    console.log($('h1').html())
+    console.log($('h1').html()) //HTML쓰면 HTML 콘텐츠를 읽고 쓸수있다. 
 
-    $('footer').html('<mark>foot</mark>')
+    $('footer').html('<mark>foot</mark>') //element, text다루고 싶을 땐 html
     console.log($('footer').html())
 
     console.log($('header').find('h1').eq(1).html())
@@ -12,6 +12,9 @@ $(() => {
     $('ul').find('li').eq(2).html('index: 2').end() //end()쓰면 처음?find()로 돌아감.
         .eq(3).html('index: 3')
         .eq(4).html('index: 4') //얘는 출력X
+
+    $('h1').text('Hi') //element빼고 text만 다루고 싶을땐 text 
+    console.log($('h1').text())
 })
 </script>
 

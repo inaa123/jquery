@@ -1,0 +1,13 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').on('click', () => $('span').text(' clicked.'))
+
+    $('button').on({
+        mouseover: () => $('span').text(' mouseovered.'), //객체위에 마우스가 올라간것
+        mouseout: () => $('span').text(' mouseouted.') //마우스아웃은 객체밖으로 커서가 나간것
+    })
+})
+</script>
+
+<button type='button'>confirm</button><span></span>

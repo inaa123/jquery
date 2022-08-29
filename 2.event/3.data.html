@@ -1,0 +1,17 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click('abel', e => { //파라미터에 e event객체가 들어감. 첫번째 파라미터로 abel이란 데이터가 들어감. 
+        let userName = $('input').val()
+        if(userName == e.data)//입력값이 이벤트객체의 데이터값과 같으면
+            $('span').text(` valid: ${e.data}`).show().fadeOut(1000)
+        else $('span').text(` invalid: ${userName}`) //틀린유저네임 알ㄹ려줌
+    })
+
+})
+</script>
+
+<form>
+    <input type='text' name='userName' placeholder='사용자명'/><span></span><br>
+    <button type='button'>submit</button>
+</form>
