@@ -1,0 +1,28 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    let table = $('body')
+
+    $('button').click(() => {
+        $.ajax({
+            url: '2.data.jason',
+            success: data => {
+                //과제
+                
+            }
+        })
+    })
+})
+</script>
+
+<button type='button'>load</button>
+
+<table>
+    <thead>
+        <tr><th>이름</th><th>가격</th><th>기한</th><th>생산자</th></tr>
+    </thead>
+    <tbody>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>

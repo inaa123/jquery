@@ -1,7 +1,10 @@
 <script>
 window.onerror = (msg, url, line, col, err) => {
-    document.write(`${msg}<br>`)
+    document.write(`${msg} <br>`) //화면에 출력하는 거니까 html태그 이용할 수있음
+    document.write(`at ${line}:${col} of ${url}`)
+    document.write(`<hr>`) // 구분선
+    document.write(err)
 }
-</script>
 
-a;
+a // ReferenceError: a is not defined.
+</script>

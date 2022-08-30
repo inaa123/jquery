@@ -1,0 +1,30 @@
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+<script>
+$(() => {
+    $('button').click(() => {
+        $.ajax({
+            //request
+            url: '01.data.json', //request에 담을 url, liveserver는 url과 일치하는 거 찾을거임.
+            data: {id: 'yellow'}, //request 데이터 타입은 text
+            type: 'get', // request 타입은 get
+            dataType: 'json', //response로 json데이터를 받아 처리할 준비가 돼있다.
+            //response
+            success: (data, status, xhr) => {
+                $('<h3>').text(data.userName).appendTo('body')
+                $('<p>').html(status).appendTo('body') 
+                console.log(xhr) //xhr엔 객체가 담김 얘는 콘솔에 출력해볼게용
+            },
+            error: (xhr, status) => { // error handler, 리스펀스받았더니 에러다.
+                console.log('error: ', status)
+                console.log(xhr)
+            },
+            complete: (xhr, status) => { //에러든 성공이든 실행하고 싶을때?
+                console.log('comple: ', status)
+            }
+        })
+    })
+})
+</script>
+
+<button type='button'>click</button>
+<!-- Asynchrous Javascript And Xml -->
